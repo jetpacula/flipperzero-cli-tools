@@ -50,7 +50,7 @@ def flp_serial_by_name(flp_name):
     if sys.platform == 'darwin':    #MacOS
         flp_serial = '/dev/cu.usbmodemflip_' + flp_name + '1'
     elif sys.platform == 'linux':   #Linux
-        flp_serial = '/dev/serial/by-id/usb-Flipper_Devices_Inc._Flipper_' + flp_name + '_flip_' + flp_name + '-if00'
+        flp_serial = '/dev/serial/by-id/usb-Flipper_Devices_Inc._' + flp_name + '_flip_' + flp_name + '-if00'
 
     if os.path.exists(flp_serial):
         return flp_serial
